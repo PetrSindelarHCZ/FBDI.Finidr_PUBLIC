@@ -1,15 +1,14 @@
-# HD FBDI Service – Release Notes
+# HD FBDI Service - Release Notes v1.26.160.10
 
 ## Installation
 
-Download **HD-FBDI-Service-install.exe** (attached below) and run it as **Administrator**.
+Download **HD-FBDI-Service-install.exe** from the release assets and run it as **Administrator**.
 
-The installer will:
-- Install HD FBDI Service as a Windows Service (auto-start).
+- Install HD FBDI Service as a Windows Service with automatic startup.
 - Install HD FBDI Tray App into the `TrayApp` subfolder.
-- Start the service and launch the tray app.
+- Start the service and launch the Tray App.
 
-Running the installer over an existing installation performs an **in-place upgrade** automatically.
+Running the installer over an existing installation performs an in-place upgrade. No uninstall is required.
 
 ### Silent installation
 
@@ -17,16 +16,15 @@ Running the installer over an existing installation performs an **in-place upgra
 HD-FBDI-Service-install.exe /SILENT
 ```
 
-## What's included
+## Changes in this release
 
-| Component | Description |
-|-----------|-------------|
-| HD FBDI Service | Windows background service for automated print-job processing |
-| HD FBDI Tray App | Tray application for service monitoring and hotfolder alerts |
+- Improved export reliability with temporary export folders, atomic final moves, and recovery diagnostics.
+- Hardened ingestion and concurrent job processing.
+- Added the workflow for publishing the installer to the public distribution repository.
+- Added installer version information logging and improved packaging behavior.
 
 ## Configuration
 
-Service settings are stored in `C:\ProgramData\Heidelberg Praha\HD FBDI Service\`.  
-Tray app settings are in `appsettings.json` next to `HD FBDI.TrayApp.exe`.
+Service settings are stored in `%ProgramData%\Heidelberg Praha\HD FBDI Service\`.
 
-For full documentation see the [repository README](https://github.com/PetrSindelarHCZ/FBDI.Finidr#readme).
+For current installation documentation see the [repository README](https://github.com/PetrSindelarHCZ/FBDI.Finidr_PUBLIC#readme).
