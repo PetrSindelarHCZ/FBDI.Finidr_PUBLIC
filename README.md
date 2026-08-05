@@ -14,7 +14,7 @@ Public distribution repository for HD FBDI Service — a Windows background serv
 
 Download the latest installer from the [Releases](../../releases) page.
 
-- `HD-FBDI-Service-install.exe` — recommended installer (includes .NET 10 runtime)
+- `HD-FBDI-Service-install.exe` — recommended installer for systems with the .NET 10 runtime
 
 ---
 
@@ -23,7 +23,7 @@ Download the latest installer from the [Releases](../../releases) page.
 | Requirement | Minimum |
 |---|---|
 | **Operating System** | Windows 10 (64-bit) or Windows Server 2016 or later |
-| **.NET Runtime** | 10.0 (included in installer) |
+| **.NET Runtime** | 10.0 (must be installed separately) |
 | **Permissions** | Local Administrator (service installation) |
 
 ---
@@ -54,8 +54,14 @@ Running the installer over an existing installation performs an **in-place upgra
 Service settings are stored in:
 
 ```
-%ProgramData%\Heidelberg Praha\HD FBDI Service\Settings.xml
+%ProgramData%\Heidelberg Praha\HD FBDI Service\Settings.json
 ```
+
+The color book is stored in `ColorBook.json`. Runtime job state is stored in `RuntimeState\JobList.json`.
+
+On first start, missing JSON files are created with inert defaults. No hotfolder, export, or spool directories are created until configured.
+
+Version `v1.26.162.4` was the last version that migrated `Settings.xml` and `ColorBook.xml` to JSON. Upgrades with XML-only configuration are blocked; run that version first or create the missing JSON files with the current configuration tool.
 
 ---
 
