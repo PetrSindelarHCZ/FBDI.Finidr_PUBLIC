@@ -14,7 +14,7 @@ Public distribution repository for HD FBDI Service — a Windows background serv
 
 Download the latest installer from the [Releases](../../releases) page.
 
-- `HD-FBDI-Service-install.exe` — recommended installer for systems with the .NET 10 runtime
+- `HD-FBDI-Service-install.exe` — recommended installer; warns when the required x64 .NET 10 Windows Desktop or ASP.NET Core runtime is missing
 
 ---
 
